@@ -75,3 +75,16 @@ console.log(`Converted Amount: $${convertCurrency(100, 1.1)}`)
 
 console.log(`Converted Amount: $${convertCurrency(250, 0.85)}`)
 
+//TASK 6: HIGHER-ORDER FUNCTIONS - DISCOUNT STRATEGY FOR BULK ORDERS
+
+//Declare array containing five order amounts (using data provided)
+let orders = [200, 600, 1200, 450, 800];
+
+//Write higher order function to apply bulk discounts using orders array and discount function
+//First function to calculate discount
+function applyBulkDiscount(orders, discountFunction) {
+    return orders.map(order => discountFunction(order));
+}
+
+//Testing function using data provided and logging output to the console
+console.log(applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount));
