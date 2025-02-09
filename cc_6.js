@@ -19,5 +19,6 @@ function calculateSalesTax(amount, taxRate) {
 
 //Testing function using data provided and logging output to the console
 console.log(`Sales Tax: $${Math.floor(calculateSalesTax(100, 0.07))}`)
+//Use Math.floor to avoid excess decimals
 
 console.log(`Sales Tax: $${calculateSalesTax(500, 0.1)}`)
