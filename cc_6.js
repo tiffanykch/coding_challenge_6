@@ -106,3 +106,19 @@ let tracker = createExpenseTracker();
 
 console.log(tracker(200));
 console.log(tracker(150));
+
+//TASK 8: RECURSION - EMPLOYEE PROMOTION EVALUATION
+
+//Create recursive function to calculate years to promotion
+function calculateYearsToPromotion(employeeLevel) {
+    if (employeeLevel >= 10) {
+        return 0
+    } else {
+        return 2 + calculateYearsToPromotion(employeeLevel + 1)
+    }
+}
+
+//Testing function using data provided and logging output to the console
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`);
+
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`);
